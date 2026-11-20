@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Essays by Tra A.M. Stanford — on mathematics, literacy, and instruction." />
+    <link rel="icon" href="data:," />
+    <title>Essays — Tra A.M. Stanford</title>
+    <style>
+      :root {
+        --paper: #faf6ef;
+        --ink: #1a1611;
+        --ink-soft: #4c463c;
+        --ink-faint: #7a7264;
+        --accent: #0e4f4a;
+        --rule: #0e4f4a;
+        --card-border: #ddd3c2;
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --paper: #171410;
+          --ink: #ece5d8;
+          --ink-soft: #b3a893;
+          --ink-faint: #8a8071;
+          --accent: #5fb3ab;
+          --rule: #5fb3ab;
+          --card-border: #2e2a24;
+          color-scheme: dark;
+        }
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", Times, serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .page {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 56px 24px 52px;
+      }
+
+      /* Header — same register as the essay page */
+      h1 {
+        font-size: 42px;
+        line-height: 1.1;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: -0.01em;
+        margin: 0 0 10px;
+        text-wrap: balance;
+      }
+      .byline {
+        text-align: center;
+        font-size: 15.5px;
+        color: var(--ink-soft);
+        padding-bottom: 26px;
+        border-bottom: 1px solid var(--rule);
+      }
+      .intro {
+        padding-top: 28px;
+        font-size: 17.5px;
+        line-height: 1.68;
+        color: var(--ink-soft);
+        text-align: center;
+        max-width: 520px;
+        margin: 0 auto;
+      }
+
+      /* Essay list */
+      .list-label {
+        margin-top: 40px;
+        margin-bottom: 4px;
+        font-family: ui-sans-system, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+      }
+      .essay-list {
+        list-style: none;
+        border-top: 1px solid var(--card-border);
+      }
+      .essay-item {
+        border-bottom: 1px solid var(--card-border);
+      }
+      .essay-link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        padding: 26px 4px 26px;
+        min-height: 44px;
+      }
+      .essay-link:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 4px;
+        border-radius: 2px;
+      }
+      .essay-title-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .essay-title {
+        font-size: 24px;
+        line-height: 1.25;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+      .essay-arrow {
+        flex-shrink: 0;
+        font-size: 20px;
+        line-height: 1;
+        color: var(--accent);
+        transition: transform 160ms ease;
+      }
+      .essay-link:hover .essay-title {
+        text-decoration: underline;
+        text-decoration-color: var(--accent);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+      }
+      .essay-link:hover .essay-arrow {
+        transform: translateX(3px);
+      }
+      .essay-dek {
+        margin-top: 10px;
+        font-size: 16.5px;
+        line-height: 1.65;
+        color: var(--ink-soft);
+        max-width: 560px;
+      }
+      .essay-meta {
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: ui-sans-system, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.02em;
+        color: var(--ink-faint);
+      }
+      .essay-meta .dot {
+        width: 3px; height: 3px; border-radius: 999px; background: var(--ink-faint); display: inline-block;
+      }
+      .read-label {
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      /* Footer — mirrors the essay page */
+      footer { margin-top: 44px; }
+      .rule { border-top: 1px solid var(--rule); margin-bottom: 18px; }
+      .ident {
+        font-size: 13.5px;
+        color: var(--ink-soft);
+        line-height: 1.6;
+      }
+      .colophon {
+        font-size: 13.5px;
+        color: var(--ink-soft);
+        line-height: 1.6;
+        margin-top: 10px;
+      }
+
+      @media (max-width: 560px) {
+        .page { padding: 40px 22px 38px; }
+        h1 { font-size: 32px; }
+        .intro { font-size: 16.5px; padding-top: 22px; }
+        .essay-title { font-size: 21px; }
+        .essay-dek { font-size: 15.5px; }
+        .essay-link { padding: 22px 2px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .essay-arrow { transition: none; }
+      }
+      @media print {
+        .page { padding: 0; max-width: none; }
+        body { background: #fff; }
+        .essay-arrow { display: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>Essays</h1>
+        <div class="byline">By Tra A.M. Stanford</div>
+        <p class="intro">Writing on mathematics, literacy, and instruction — the reasoning behind the framework, in public.</p>
+      </header>
+
+      <main>
+        <p class="list-label">Published</p>
+        <ul class="essay-list">
+          <li class="essay-item">
+            <a class="essay-link" href="why-tutoring-doesnt-work.html">
+              <span class="essay-title-row">
+                <span class="essay-title">Why Tutoring Doesn&rsquo;t Work</span>
+                <span class="essay-arrow" aria-hidden="true">&rarr;</span>
+              </span>
+              <span class="essay-dek" style="display:block;">Tutoring fails not for lack of effort or quality, but by definition. It works inside the conception that failed the learner, and produces performance where learning should be. Instruction — working at the level of the framework — is the alternative.</span>
+              <span class="essay-meta">
+                <span class="read-label">Read essay</span>
+                <span class="dot" aria-hidden="true"></span>
+                <span>8 paragraphs</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </main>
+
+      <footer>
+        <div class="rule"></div>
+        <p class="ident">Tra A.M. Stanford is a mathematics instructor. He teaches learners directly, under a framework of his own design, and is building the platform that framework calls for.</p>
+        <p class="colophon"><em>Theses and judgments are the author&rsquo;s; prose was developed with AI assistance.</em></p>
+      </footer>
+    </div>
+  </body>
+</html>
