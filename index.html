@@ -188,14 +188,17 @@
         color: var(--ink-faint);
         min-height: 15px;
       }
-      .excerpts { display: block; margin-top: 4px; }
-      .excerpt {
+      .excerpts { display: block; padding: 2px 4px 24px; margin-top: -14px; }
+      a.excerpt {
         display: block;
         margin-top: 10px;
         font-size: 15px;
         line-height: 1.6;
         color: var(--ink-soft);
+        text-decoration: none;
       }
+      a.excerpt:hover { color: var(--ink); }
+      a.excerpt:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
       .excerpt mark { background: none; color: var(--accent); font-weight: 700; }
       .no-results {
         display: none;
@@ -330,7 +333,8 @@
         function esc(s) {
           return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
         }
-        function excerptFor(text, phrase, term) {
+        function excerptFor(passage, phrase, term) {
+          var text = passage.t;
           var n = norm(text);
           var needle = phrase, i = n.indexOf(needle);
           if (i < 0) { needle = term; i = n.indexOf(needle); }
@@ -341,7 +345,7 @@
           if (start > 0) out += "&hellip;";
           out += esc(text.slice(start, i)) + "<mark>" + esc(text.slice(i, i + needle.length)) + "</mark>" + esc(text.slice(i + needle.length, end));
           if (end < text.length) out += "&hellip;";
-          return out;
+          return { html: out, anchor: passage.a };
         }
         function clearExcerpts(item) {
           var box = item.querySelector(".excerpts");
@@ -361,21 +365,27 @@
             var d = data[idx];
             clearExcerpts(item);
             if (!d) { item.style.display = "none"; return; }
-            var full = norm(d.title + " " + d.dek + " " + d.paragraphs.join(" "));
+            var full = norm(d.title + " " + d.dek + " " + d.paragraphs.map(function (p) { return p.t; }).join(" "));
             var all = terms.every(function (t) { return full.indexOf(t) >= 0; });
             if (!all) { item.style.display = "none"; return; }
             item.style.display = "";
             shown++;
-            var excerpts = [];
-            for (var k = 0; k < d.paragraphs.length && excerpts.length < 2; k++) {
+            var found = [];
+            for (var k = 0; k < d.paragraphs.length && found.length < 2; k++) {
               var ex = excerptFor(d.paragraphs[k], q, terms[0]);
-              if (ex) excerpts.push(ex);
+              if (ex) found.push(ex);
             }
-            if (excerpts.length) {
-              var box = document.createElement("span");
+            if (found.length) {
+              var box = document.createElement("div");
               box.className = "excerpts";
-              box.innerHTML = excerpts.map(function (e) { return '<span class="excerpt">' + e + "</span>"; }).join("");
-              item.querySelector(".essay-link").appendChild(box);
+              found.forEach(function (ex) {
+                var a = document.createElement("a");
+                a.className = "excerpt";
+                a.href = d.url + "#" + ex.anchor;
+                a.innerHTML = ex.html;
+                box.appendChild(a);
+              });
+              item.appendChild(box);
             }
           });
           status.textContent = shown + " of " + items.length + (items.length === 1 ? " essay" : " essays");
