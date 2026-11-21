@@ -154,6 +154,58 @@
         font-weight: 600;
       }
 
+
+      /* Search */
+      .search-wrap { margin-top: 38px; }
+      .search-label {
+        display: block;
+        margin-bottom: 10px;
+        font-family: ui-sans-system, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+      }
+      .search-input {
+        width: 100%;
+        font: inherit;
+        font-size: 17px;
+        line-height: 1.4;
+        padding: 12px 14px;
+        color: var(--ink);
+        background: transparent;
+        border: 1px solid var(--card-border);
+        border-radius: 4px;
+      }
+      .search-input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+      .search-input::placeholder { color: var(--ink-faint); }
+      .search-status {
+        margin-top: 10px;
+        font-family: ui-sans-system, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 12.5px;
+        letter-spacing: 0.02em;
+        color: var(--ink-faint);
+        min-height: 15px;
+      }
+      .excerpts { display: block; margin-top: 4px; }
+      .excerpt {
+        display: block;
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 1.6;
+        color: var(--ink-soft);
+      }
+      .excerpt mark { background: none; color: var(--accent); font-weight: 700; }
+      .no-results {
+        display: none;
+        padding: 26px 4px;
+        font-size: 16.5px;
+        line-height: 1.65;
+        color: var(--ink-soft);
+        border-bottom: 1px solid var(--card-border);
+      }
+
       /* Footer — mirrors the essay page */
       footer { margin-top: 44px; }
       .rule { border-top: 1px solid var(--rule); margin-bottom: 18px; }
@@ -184,6 +236,7 @@
         .page { padding: 0; max-width: none; }
         body { background: #fff; }
         .essay-arrow { display: none; }
+        .search-wrap { display: none; }
       }
     </style>
   </head>
@@ -196,6 +249,11 @@
       </header>
 
       <main>
+        <div class="search-wrap">
+          <label class="search-label" for="essay-search">Search the essays</label>
+          <input class="search-input" id="essay-search" type="search" placeholder="Search titles and full text&hellip;" autocomplete="off" />
+          <p class="search-status" id="search-status" aria-live="polite"></p>
+        </div>
         <p class="list-label">Published</p>
         <ul class="essay-list">
           <li class="essay-item">
@@ -247,6 +305,7 @@
             </a>
           </li>
         </ul>
+        <p class="no-results" id="no-results">No essay matches your search.</p>
       </main>
 
       <footer>
@@ -254,5 +313,76 @@
         <p class="ident">Tra A.M. Stanford is a mathematics instructor. He instructs learners directly, under a framework of his own design, and is building the platform that framework calls for.</p>
       </footer>
     </div>
+    <script src="search-data.js"></script>
+    <script>
+      (function () {
+        var input = document.getElementById("essay-search");
+        var status = document.getElementById("search-status");
+        var noResults = document.getElementById("no-results");
+        var items = Array.prototype.slice.call(document.querySelectorAll(".essay-item"));
+        var data = window.ESSAY_SEARCH_DATA || [];
+        function norm(s) {
+          return s.toLowerCase()
+            .replace(/[\u2018\u2019]/g, "'")
+            .replace(/[\u201c\u201d]/g, '\"')
+            .replace(/[\u2014\u2013]/g, "-");
+        }
+        function esc(s) {
+          return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+        function excerptFor(text, phrase, term) {
+          var n = norm(text);
+          var needle = phrase, i = n.indexOf(needle);
+          if (i < 0) { needle = term; i = n.indexOf(needle); }
+          if (i < 0) return null;
+          var start = Math.max(0, i - 70);
+          var end = Math.min(text.length, i + needle.length + 90);
+          var out = "";
+          if (start > 0) out += "&hellip;";
+          out += esc(text.slice(start, i)) + "<mark>" + esc(text.slice(i, i + needle.length)) + "</mark>" + esc(text.slice(i + needle.length, end));
+          if (end < text.length) out += "&hellip;";
+          return out;
+        }
+        function clearExcerpts(item) {
+          var box = item.querySelector(".excerpts");
+          if (box) box.parentNode.removeChild(box);
+        }
+        function run() {
+          var q = norm(input.value).replace(/\s+/g, " ").trim();
+          if (!q) {
+            items.forEach(function (item) { item.style.display = ""; clearExcerpts(item); });
+            status.textContent = "";
+            noResults.style.display = "none";
+            return;
+          }
+          var terms = q.split(" ");
+          var shown = 0;
+          items.forEach(function (item, idx) {
+            var d = data[idx];
+            clearExcerpts(item);
+            if (!d) { item.style.display = "none"; return; }
+            var full = norm(d.title + " " + d.dek + " " + d.paragraphs.join(" "));
+            var all = terms.every(function (t) { return full.indexOf(t) >= 0; });
+            if (!all) { item.style.display = "none"; return; }
+            item.style.display = "";
+            shown++;
+            var excerpts = [];
+            for (var k = 0; k < d.paragraphs.length && excerpts.length < 2; k++) {
+              var ex = excerptFor(d.paragraphs[k], q, terms[0]);
+              if (ex) excerpts.push(ex);
+            }
+            if (excerpts.length) {
+              var box = document.createElement("span");
+              box.className = "excerpts";
+              box.innerHTML = excerpts.map(function (e) { return '<span class="excerpt">' + e + "</span>"; }).join("");
+              item.querySelector(".essay-link").appendChild(box);
+            }
+          });
+          status.textContent = shown + " of " + items.length + (items.length === 1 ? " essay" : " essays");
+          noResults.style.display = shown === 0 ? "block" : "none";
+        }
+        input.addEventListener("input", run);
+      })();
+    </script>
   </body>
 </html>
