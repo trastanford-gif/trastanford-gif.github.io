@@ -3,7 +3,7 @@ window.ESSAY_SEARCH_DATA = [
   "title": "Are You Sure You’re A Mathematician?",
   "url": "are-you-sure-youre-a-mathematician.html",
   "date": "November 21, 2026",
-  "dek": "A title is supposed to name a function. Doing the math is establishing objects; using it is calculating with them — and much of what the field celebrates is the second. On the criterion that separates the mathematician from the qualitative arithmetician, and the re-ranking the machine’s using has already performed.",
+  "dek": "A title is supposed to name a function. Doing the math is establishing objects; using it is calculating with them — and much of what the field celebrates is the second.",
   "paragraphs": [
    {
     "t": "The question should resonate without rattling. It is an examination, and like every honest examination it has a criterion behind it, one that can be stated and then applied to anyone who holds the title, the celebrated and the obscure alike. Most of the people who would be stung by the question have never actually sat it. They hold the title the way the experienced teacher holds his years: as a standing that ends inquiry rather than a claim that survives it. But a title in this field is supposed to name a function. So: what is the function, and are you performing it?",
