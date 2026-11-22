@@ -1,5 +1,45 @@
 window.ESSAY_SEARCH_DATA = [
  {
+  "title": "Are You Sure You’re A Mathematician?",
+  "url": "are-you-sure-youre-a-mathematician.html",
+  "date": "November 21, 2026",
+  "dek": "A title is supposed to name a function. Doing the math is establishing objects; using it is calculating with them — and much of what the field celebrates is the second. On the criterion that separates the mathematician from the qualitative arithmetician, and the re-ranking the machine’s using has already performed.",
+  "paragraphs": [
+   {
+    "t": "The question should resonate without rattling. It is an examination, and like every honest examination it has a criterion behind it, one that can be stated and then applied to anyone who holds the title, the celebrated and the obscure alike. Most of the people who would be stung by the question have never actually sat it. They hold the title the way the experienced teacher holds his years: as a standing that ends inquiry rather than a claim that survives it. But a title in this field is supposed to name a function. So: what is the function, and are you performing it?",
+    "a": "p1"
+   },
+   {
+    "t": "Everything turns on a distinction the field declines to draw. “Doing the math” is establishing mathematical objects, which is to say the concise definitions of conceptual objects in order that they become useful. “Using the math” is when calculations are being done with those objects. The two are not degrees of one activity. They are different activities, and much of the celebrated proof-resolving of modern mathematics belongs to the second. If math is not being done—only used—then no math is being conferred. This corollary can be aimed at classrooms, but it cuts upward just as cleanly: if math is not being done, only used, then no mathematician is at work either, whatever the chair, the journal, or the reputation says.",
+    "a": "p2"
+   },
+   {
+    "t": "The conflation is easiest to see where it is currently loudest. There is a great deal of talk portraying AI as good at math, and the talk is mistaken in a specific way: what it points to is AI’s excellence at using math, and it reports that excellence as doing. The big mistake academic mathematicians make in interpreting AI capability is the same mistake in professional panoply. A system completes a proof, and the completion is taken as evidence that math was done. But completing a proof is working with objects that were established before the proof began, by established rules. The hard cases do not break this. A system that produces a novel proof is still working established objects by established rules—elaborate using, not doing. The machine’s performance tells us a great deal about the power of using at scale. About doing it tells us nothing, because no human-facing establishing occurred.",
+    "a": "p3"
+   },
+   {
+    "t": "This is not a complaint about proof. Much of the resolving of proofs amounts to qualitative calculation, though the proofs may be quantitative in concern. Calculation is rule-governed operation on established objects, of whatever kind, numeric or not. The dictionary, read as it stands, already says this: arithmetic is “the method or process of computation with figures,” and a figure is not necessarily a number. A figure is a form, any delineated representation. The definition is unknowingly correct—it already covers computation with qualitative objects, and always did. Doing the quantitative kind, in fact, requires qualitativity. No quantity was ever established by measuring. The definition of a quantity is not itself a quantity: a unit, a scale, a standard—each had to be constructed before anything could be measured by it. So the line between doing and using does not run between quantity and quality. It runs between establishing and operating. The rest—however deep, however difficult—is resolution: qualitative calculation, performed on what was established before the proof began.",
+    "a": "p4"
+   },
+   {
+    "t": "Where, then, is doing to be found, and how would anyone know? Names attach to establishments—the objects and definitions a person constructed still carry them centuries later. Nobody’s name endures on a calculation, however brilliant. The stalled proof is the one honest examination in the field. Picture the proof that has eluded resolution for decades: every known object applied, every established rule exhausted, calculation run to its limit and stopped. At that point exactly one thing can move it. Someone must establish new math—construct a definition, an object that did not exist in the field’s stock, defined concisely enough to become useful—so that the proof can proceed. That construction is the doing. Everything before it was the using, waiting on it.",
+    "a": "p5"
+   },
+   {
+    "t": "The criterion for the title follows. The only way one is a mathematician rather than an expert in advanced calculation is if, for a proof that has eluded resolution, one can establish new math that allows it to proceed—the construction of a definition. Coining a term yields a name; constructing a definition yields an object, where the object is its definition. A man who has only ever resolved proofs with already established objects may be learned, may be formidable, may be the finest resolver alive. The function he is serving, named accurately, is that of a qualitative arithmetician: computational with figures, where the figures are forms and concepts other than numerals. The term may dishearten. But it’s incumbent upon the mathematically-inclined to resist the temptation of sentiment. A de-ranking title is not to be construed as a demotion if it properly names. Many people in the world have undergone a change in rank without knowing it yet. The re-ranking was not issued by this essay, and AI, a tool which was crafted in large part by people of the type this inquiry addresses, must not be scapegoated in this matter. The machine, by performing the using at inhuman scale and tireless speed, separated the two activities in public grandeur for the first time. I’m just naming why it happened. What remains attributable to the human practitioner, once the using is priced at machine rates, is whatever he can establish.",
+    "a": "p6"
+   },
+   {
+    "t": "And here the ground under the criterion shows itself, because establishment is not a technique that a sufficiently advanced machine has merely not yet gotten to. To derive is to produce what is lacking from what is presently had. Establishing an object is derivation in its purest form: the object is defined because it is lacking, and it is defined in order to become useful—and usefulness is always usefulness to someone, relative to a need. The establisher’s own lack is what anchors the judgment of what would be useful, and how concise is concise enough. What humans need to understand is that only humans can establish math relative to the needs of humans, which is why it can’t be explicitly done by AI. A system with no needs of its own can generate candidate definitions without practical limit. What it cannot perform is the establishing judgment, because that judgment belongs to the need-holder, the one who feels the lack the object is built to answer. Needs are many, held by persons severally and by humans in common; there is no single need for a machine to be aimed at, and no lack of its own for it to derive from.",
+    "a": "p7"
+   },
+   {
+    "t": "So the question returns to its addressee, and it is meant kindly, the way any real examination is meant: as an invitation to locate oneself exactly. This is not the forum for a performance, and none is demanded. The evidence is already in the room: anyone who fancies himself a mathematician is surrounded by objects that are the performances of others, every object he works with established by someone. Do not answer with standing, with years, with the difficulty of the proofs you have resolved; difficulty is a property of calculations too. Answer by location. Which of those objects exists because you constructed its definition—the lack it answered, the work it made possible that could not proceed without it? If one does, the title is yours in the only sense that was ever worth defending. If none does—yet—the honest name for the function is available, and wearing it is no disgrace. It is the first accurate measurement of where the doing remains to be done.",
+    "a": "p8"
+   }
+  ]
+ },
+ {
   "title": "The Math of Teacher Illiteracy",
   "url": "the-math-of-teacher-illiteracy.html",
   "date": "November 21, 2026",
