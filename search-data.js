@@ -22,7 +22,7 @@ window.ESSAY_SEARCH_DATA = [
     "a": "p4"
    },
    {
-    "t": "Where, then, is doing to be found, and how would anyone know? Names attach to establishments—the objects and definitions a person constructed still carry them centuries later. Nobody’s name endures on a calculation, however brilliant. The stalled proof is the one honest examination in the field. Picture the proof that has eluded resolution for decades: every known object applied, every established rule exhausted, calculation run to its limit and stopped. At that point exactly one thing can move it. Someone must establish new math—construct a definition, an object that did not exist in the field’s stock, defined concisely enough to become useful—so that the proof can proceed. That construction is the doing. Everything before it was the using, waiting on it.",
+    "t": "Where, then, is doing to be found, and how would anyone know? Names attach to establishments—the defined objects a person constructed still carry them centuries later. Nobody’s name endures on a calculation, however brilliant. The stalled proof is the one honest examination in the field. Picture the proof that has eluded resolution for decades: every known object applied, every established rule exhausted, calculation run to its limit and stopped. At that point exactly one thing can move it. Someone must establish new math—construct a definition, an object that did not exist in the field’s stock, defined concisely enough to become useful—so that the proof can proceed. That construction is the doing. Everything before it was the using, waiting on it.",
     "a": "p5"
    },
    {
