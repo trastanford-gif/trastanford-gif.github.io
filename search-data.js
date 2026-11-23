@@ -10,7 +10,7 @@ window.ESSAY_SEARCH_DATA = [
     "a": "p1"
    },
    {
-    "t": "Everything turns on a distinction the field declines to draw. “Doing the math” is establishing mathematical objects, which is to say the concise definitions of conceptual objects in order that they become useful. “Using the math” is when calculations are being done with those objects. The two are not degrees of one activity. They are different activities, and much of the celebrated proof-resolving of modern mathematics belongs to the second. If math is not being done—only used—then no math is being conferred. This corollary can be aimed at classrooms, but it cuts upward just as cleanly: if math is not being done, only used, then no mathematician is at work either, whatever the chair, the journal, or the reputation says.",
+    "t": "Everything turns on a mathematical distinction the field declines to draw. “Doing the math” is establishing mathematical objects, which is to say the concise definitions of conceptual objects in order that they become useful. “Using the math” is when calculations are being done with those objects. The two are not degrees of one activity. They are different activities, and much of the celebrated proof-resolving of modern mathematics belongs to the second. If math is not being done—only used—then no math is being conferred. This corollary can be aimed at classrooms, but it cuts upward just as cleanly: if math is not being done, only used, then no mathematician is at work either, whatever the chair, the journal, or the reputation says.",
     "a": "p2"
    },
    {
