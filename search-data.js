@@ -1,6 +1,6 @@
 window.ESSAY_SEARCH_DATA = [
  {
-  "title": "Are You Sure You’re A Mathematician?",
+  "title": "Are You Sure You’re a Mathematician?",
   "url": "are-you-sure-youre-a-mathematician.html",
   "date": "November 21, 2026",
   "dek": "A title is supposed to name a function. Doing the math is establishing objects; using it is calculating with them — and much of what the field celebrates is the second.",
