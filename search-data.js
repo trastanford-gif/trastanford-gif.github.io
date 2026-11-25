@@ -54,7 +54,7 @@ window.ESSAY_SEARCH_DATA = [
     "a": "p2"
    },
    {
-    "t": "Literacy, stated formally, is the capacity to derive anything of fundamental need—stated formally again, it is “the capacity to teach oneself.” A literate person is not a person who has been stocked with what he needs. He is a person who can produce what he needs when the stock runs out: who can work a thing out from what he already holds, establish what he does not yet have, and so keep going without a supplier. Illiteracy, by the same definition, is not ignorance. A man may be full of information and still illiterate in this sense, if everything he has was handed to him and he can derive nothing on his own.",
+    "t": "Literacy, stated formally, is the capacity to derive anything of fundamental need—stated formally again, it is the capacity to teach oneself. A literate person is not a person who has been stocked with what he needs. He is a person who can produce what he needs when the stock runs out: who can work a thing out from what he already holds, establish what he does not yet have, and so keep going without a supplier. Illiteracy, by the same definition, is not ignorance. A man may be full of information and still illiterate in this sense, if everything he has was handed to him and he can derive nothing on his own.",
     "a": "p3"
    },
    {
