@@ -58,7 +58,7 @@ window.ESSAY_SEARCH_DATA = [
     "a": "p3"
    },
    {
-    "t": "Professional literacy is that same capacity aimed at a job: “the capacity to assume and fulfill the duties of one’s job,” where duty is defined by the order of purpose, not the order of employment. For a teacher, the duty runs to the learner. So the question about a math teacher is not whether he is educated, credentialed, experienced, or sincere. It is whether he holds, in his own subject, that very capacity his job exists to build into someone else.",
+    "t": "Professional literacy is that same capacity aimed at a job: “the capacity to assume and fulfill the duties of one’s job,” where duty is defined by the order of purpose, not the order of employment. For a teacher, the duty runs to the student. So the question about a math teacher is not whether he is educated, credentialed, experienced, or sincere. It is whether he holds, in his own subject, that very capacity his job exists to build into someone else.",
     "a": "p4"
    },
    {
