@@ -58,7 +58,7 @@ window.ESSAY_SEARCH_DATA = [
     "a": "p3"
    },
    {
-    "t": "Professional literacy is that same capacity aimed at a job: “the capacity to assume and fulfill the duties of one’s job,” where duty is defined by the order of purpose, not the order of employment. For a teacher, the duty runs to the student. So the question about a math teacher is not whether he is educated, credentialed, experienced, or sincere. It is whether he holds, in his own subject, that very capacity his job exists to build into someone else.",
+    "t": "Professional literacy is that same capacity aimed at a job: the capacity to assume and fulfill the duties of one’s job, where duty is defined by the order of purpose, not the order of employment. For a teacher, the duty runs to the student. So the question about a math teacher is not whether he is educated, credentialed, experienced, or sincere. It is whether he holds, in his own subject, that very capacity his job exists to build into someone else.",
     "a": "p4"
    },
    {
@@ -78,7 +78,7 @@ window.ESSAY_SEARCH_DATA = [
     "a": "p8"
    },
    {
-    "t": "The cost is paid by the only party who never agreed to any of it. The child in that classroom cannot distinguish between a teacher who cannot establish the subject and a subject that cannot be understood. Faced with procedures that operate on objects he was never given, and no sense anywhere to check them against, he draws the conclusion the arrangement has prepared for him: that math is a thing other minds are built for, and his is not. “And if math is not being done—only used—then no math is being taught.” If no math is being taught, then the child’s failure to learn it is not a failure at all. It is the one accurate measurement in the building.",
+    "t": "The cost is paid by the only party who never agreed to any of it. The child in that classroom cannot distinguish between a teacher who cannot establish the subject and a subject that cannot be understood. Faced with procedures that operate on objects he was never given, and no sense anywhere to check them against, he draws the conclusion the arrangement has prepared for him: that math is a thing other minds are built for, and his is not. And if math is not being done—only used—then no math is being taught. If no math is being taught, then the child’s failure to learn it is not a failure at all. It is the one accurate measurement in the building.",
     "a": "p9"
    },
    {
