@@ -62,7 +62,7 @@ window.ESSAY_SEARCH_DATA = [
     "a": "p4"
    },
    {
-    "t": "Now the subject. “Doing the math” is establishing mathematical objects, which is to say the concise definitions of conceptual objects in order that they become useful. “Using the math” is when calculations are being done with the aforementioned objects. The two are not the same activity, and the distance between them is where this essay lives. A teacher may be fluent in the second and never have performed the first. He can calculate with objects others established—demonstrate the procedures, assign the practice, grade the results fairly—and yet be unable to establish a single one of those objects himself, or say what the subject he teaches actually is.",
+    "t": "Now the subject. “Doing the math” is establishing mathematical objects, which is to say the concise definitions of conceptual objects in order that they become useful. “Using the math” is when calculations are being done with those objects. The two are not the same activity, and the distance between them is where this essay lives. A teacher may be fluent in the second and never have performed the first. He can calculate with objects others established—demonstrate the procedures, assign the practice, grade the results fairly—and yet be unable to establish a single one of those objects himself, or say what the subject he teaches actually is.",
     "a": "p5"
    },
    {
